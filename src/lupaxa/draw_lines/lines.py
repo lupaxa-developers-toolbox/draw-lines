@@ -59,14 +59,7 @@ def _color_codes(color: str) -> tuple[str, str]:
     return color_code, reset_code
 
 
-def _display_text(
-    text: str,
-    position: str,
-    fill_char: str,
-    pad: int,
-    color_code: str,
-    reset_code: str,
-) -> str:
+def _display_text(text: str, position: str, fill_char: str, pad: int, color_code: str, reset_code: str) -> str:
     """Build the text segment, including padding and colour codes."""
     if position == "left":
         gap = " " if pad > 0 else ""
@@ -77,14 +70,7 @@ def _display_text(
     return f" {color_code}{text}{reset_code} "
 
 
-def draw_line(
-    text: str = "",
-    position: str = "center",
-    fill_char: str = "-",
-    pad: int = 2,
-    width: int = -1,
-    color: str = "",
-) -> str:
+def draw_line(text: str = "", position: str = "center", fill_char: str = "-", pad: int = 2, width: int = -1, color: str = "") -> str:
     """Draw a line with optional text on the left, centre, or right.
 
     Args:
